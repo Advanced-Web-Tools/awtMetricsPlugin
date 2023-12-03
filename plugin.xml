@@ -2,7 +2,7 @@
 <plugin>
     <name>awtMetrics</name>
     <version>v1.1</version>
-    <description>The Metrics Plugin is a straightforward and effective tool designed for effortless tracking of visitor counts on each web page. As a standalone solution, it operates seamlessly without the need for extensive customization. With a focus on simplicity, the Metrics Plugin provides essential data on page-specific visitor metrics, allowing developers and website owners to gain valuable insights without the complexity of customization.</description>
+    <description>The Metrics Plugin is a straightforward and effective tool designed for effortless tracking of visitor counts on each web page.</description>
     <icon>chart-line-solid.svg</icon>
     <requiresAuthorization>true</requiresAuthorization>
     <authorizationFile>src.SPRT.awtMetrics.class.php</authorizationFile>
