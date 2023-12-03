@@ -5,7 +5,7 @@ use api\api;
 
 class awtMetrics extends api
 {
-    private object $mysqli;
+    private mysqli $mysqli;
     private object $database;
     private $auth;
     protected $uid;
@@ -53,7 +53,7 @@ class awtMetrics extends api
 
         $this->uid = hash('SHA512', time());
         $this->ip = $_SERVER['REMOTE_ADDR'];
-        $this->url = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        $this->url = empty($_SERVER['HTTPS']) ? 'http' : 'https' . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
         $this->date = date("Y-m-d");
     }
 
@@ -152,6 +152,16 @@ class awtMetrics extends api
         return $result;
     }
 
+
+    public function getStats() {
+        if ($this->auth == 0) return false;
+
+        $stmt = $this->mysqli->prepare("SELECT * FROM `awt_metrics` WHERE 1;");
+        $stmt->execute();
+        $result = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+
+        return $result;
+    }
 
     public function Api() : void {
         parent::Api();
