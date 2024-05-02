@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <plugin>
     <name>awtMetrics</name>
-    <version>v1.1</version>
+    <version>1.2.0</version>
     <description>The Metrics Plugin is a straightforward and effective tool designed for effortless tracking of visitor counts on each web page.</description>
     <icon>chart-line-solid.svg</icon>
     <requiresAuthorization>true</requiresAuthorization>
