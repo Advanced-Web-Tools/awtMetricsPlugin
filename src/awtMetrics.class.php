@@ -5,7 +5,7 @@ use api\api;
 
 class awtMetrics extends api
 {
-    private mysqli $mysqli;
+    private object $mysqli;
     private object $database;
     private $auth;
     protected $uid;
